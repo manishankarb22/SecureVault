@@ -1,14 +1,65 @@
-# 🔐 SecureVault - Biometric File Security System
-
 <div align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Face-Recognition-FF6B6B?style=for-the-badge&logo=security&logoColor=white" alt="Face Recognition" />
-  <img src="https://img.shields.io/badge/Encryption-AES-4CAF50?style=for-the-badge&logo=shield&logoColor=white" alt="Encryption" />
-  <img src="https://img.shields.io/badge/CustomTkinter-UI-2196F3?style=for-the-badge&logo=gui&logoColor=white" alt="CustomTkinter" />
+  <img src="https://github.com/manishankarb22/SecureVault/assets/placeholder/logo.png" width="200" alt="SecureVault Logo" />
+  
+  # 🔐 SecureVault
+  ### *The Future of File Security is Here*
+  
+  **🛡️ Military-Grade Encryption • 👁️ Biometric Authentication • 🎨 Modern UI**
+  
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.8+-FF6B35?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/Face_Recognition-InsightFace-00D4FF?style=for-the-badge&logo=opencv&logoColor=white" alt="Face Recognition" />
+    <img src="https://img.shields.io/badge/Encryption-AES_256-00C851?style=for-the-badge&logo=lock&logoColor=white" alt="Encryption" />
+    <img src="https://img.shields.io/badge/UI-CustomTkinter-8E44AD?style=for-the-badge&logo=python&logoColor=white" alt="CustomTkinter" />
+    <img src="https://img.shields.io/badge/Database-MongoDB-13AA52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  </p>
+  
+  <p>
+    <img src="https://img.shields.io/github/license/manishankarb22/SecureVault?style=flat-square&color=00D4FF" alt="License" />
+    <img src="https://img.shields.io/github/stars/manishankarb22/SecureVault?style=flat-square&color=FFD700" alt="Stars" />
+    <img src="https://img.shields.io/github/forks/manishankarb22/SecureVault?style=flat-square&color=00C851" alt="Forks" />
+    <img src="https://img.shields.io/github/issues/manishankarb22/SecureVault?style=flat-square&color=FF6B35" alt="Issues" />
+  </p>
+  
+  <h3>🚀 <a href="#quick-start">Get Started</a> • 📖 <a href="#documentation">Documentation</a> • 💡 <a href="#features">Features</a> • 🤝 <a href="#contributing">Contributing</a></h3>
+  
+  ---
+  
+  <p><i>"Your files deserve the same protection as classified documents."</i></p>
+  
 </div>
 
-A cutting-edge secure file vault application that combines **biometric face authentication**, **military-grade encryption**, and **modern UI design** for ultimate file security. Built with Python and featuring an Iron Man-inspired black & orange theme.
+## 🌟 What Makes SecureVault Special?
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 **For Security Enthusiasts**
+- 🔐 **Zero-Knowledge Architecture**
+- 👁️ **Biometric Authentication** 
+- 🛡️ **End-to-End Encryption**
+- 🚫 **No Backdoors, Ever**
+
+</td>
+<td width="50%">
+
+### 🎨 **For UI/UX Lovers**
+- 🌃 **Iron Man Inspired Design**
+- ⚡ **Smooth Animations**
+- 📱 **Responsive Interface**
+- 🎭 **Dark Mode Native**
+
+</td>
+</tr>
+</table>
+
+## 🎬 See It In Action
+
+<div align="center">
+  <img src="https://github.com/manishankarb22/SecureVault/assets/placeholder/demo.gif" width="80%" alt="SecureVault Demo" />
+  <p><i>SecureVault in action - Face authentication and file encryption</i></p>
+</div>
 
 ## ✨ Features
 
