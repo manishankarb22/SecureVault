@@ -1,0 +1,201 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.py
+secrets.py
+
+# Sensitive data files
+encrypted_files/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+face_data/
+user_data/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Logs
+logs/
+*.log
+log.txt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# Models and AI files
+models/
+*.onnx
+*.pt
+*.pth
+*.pkl
+*.h5
+*.model
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Build artifacts
+*.spec
+*.exe
+*.app
+*.deb
+*.rpm
+
+# Face recognition models and data
+buffalo_l/
+*.bin
+face_models/
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Cache files
+*.cache
+.cache/
+
+# Application specific
+face_embeddings/
+encrypted_avatars/
+user_files/
+
+# Security keys and certificates
+*.key
+*.pem
+*.crt
+*.cer
+*.p7b
+*.p7c
+*.pfx
+*.p12
+*_rsa
+*_dsa
+*_ecdsa
+*_ed25519
+
+# MongoDB dumps
+*.bson
+mongo_dump/
+
+# API keys and secrets (extra safety)
+*api*key*
+*secret*
+*password*
+*token*
+credentials.*
+auth_*

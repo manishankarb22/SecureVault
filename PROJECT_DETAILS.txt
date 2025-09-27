@@ -1,0 +1,90 @@
+SECURE FILE VAULT — PROJECT DOCUMENTATION
+=========================================
+
+OVERVIEW
+--------
+A modern, secure file vault application with biometric authentication, file encryption, and a beautiful black-and-white themed UI. The app is modular, user-friendly, and built for robust security and smooth user experience.
+
+KEY FEATURES
+------------
+- **Biometric Face Authentication**: Uses InsightFace for face detection, alignment, and embedding extraction. Face is captured during signup and required for file decryption.
+- **Password Security**: Passwords are hashed with bcrypt before storage.
+- **File Encryption**: Files and profile avatars are encrypted using Fernet symmetric encryption (cryptography package).
+- **MongoDB Backend**: All user data, encrypted files, and face embeddings are stored in MongoDB.
+- **Modern UI**: Built with CustomTkinter, featuring a black background, white and orange text, animated loading overlays, and notification bars.
+- **Modular Codebase**: Each major feature is in its own Python file for maintainability.
+- **Profile Management**: Users can upload/crop encrypted avatars, edit profile, and change password.
+- **Google-style Validation**: Username and email are checked for uniqueness in real time during signup.
+- **Animated Notification Bars**: All user messages appear as animated bars at the top of the app.
+- **Smooth Navigation**: Page-to-page transitions with loading overlays and consistent styling.
+
+ARCHITECTURE & MODULES
+----------------------
+- **main.py**: App entry point. Manages navigation, loading overlays, notification bars, and integrates all modules.
+- **database.py**: `DatabaseManager` class for MongoDB operations: user management, file storage, face embedding storage, and file metadata (size, upload date, etc.).
+- **security.py**: `SecurityManager` for password hashing (bcrypt), Fernet encryption/decryption, and input validation.
+- **login.py**: `LoginPage` class. Handles login UI, validation, and notification bars.
+- **signup.py**: `SignupPage` class. Handles signup UI, face capture (with animated dialog), embedding extraction, and uniqueness checks.
+- **home.py**: `HomePage` class. Dual-panel layout for file upload/download/delete, search, and file listing. Black-and-white theme.
+- **profile.py**: `ProfilePage` class. User info, encrypted avatar upload/cropping, edit profile, and change password pages.
+- **PROJECT_DETAILS.txt**: This documentation file.
+
+SECURITY PRACTICES
+------------------
+- **Password Hashing**: All passwords are hashed with bcrypt before storage.
+- **File & Avatar Encryption**: Files and avatars are encrypted with Fernet (symmetric encryption) before being stored in MongoDB.
+- **Biometric Data**: Face images and embeddings are encrypted before storage. Face verification uses cosine similarity of embeddings.
+- **Unique User Validation**: Username and email are checked for uniqueness at signup (with MongoDB unique indexes and real-time UI feedback).
+- **No Plaintext Sensitive Data**: No passwords, face images, or files are stored in plaintext.
+
+TECHNOLOGIES & LIBRARIES
+------------------------
+- **Python 3.8+**
+- **CustomTkinter**: Modern, customizable Tkinter UI framework.
+- **Pillow**: Image processing and cropping.
+- **InsightFace**: Face detection, alignment, and embedding extraction.
+- **bcrypt**: Password hashing.
+- **cryptography (Fernet)**: Symmetric encryption for files and avatars.
+- **pymongo**: MongoDB client for Python.
+- **OpenCV**: Camera access and image processing (used internally by InsightFace and for live capture).
+- **threading**: For non-blocking UI updates and background tasks.
+
+ENCRYPTION DETAILS
+------------------
+- **Fernet (cryptography.fernet)**: Used for encrypting files and avatars. Each user/file can have a unique key derived from their password or a random secret.
+- **bcrypt**: Used for password hashing. Salted and slow to resist brute-force attacks.
+- **Face Embeddings**: Extracted using InsightFace, then encrypted and stored in MongoDB.
+
+BIOMETRIC AUTHENTICATION FLOW
+-----------------------------
+- **Signup**: User's face is captured via webcam using an animated dialog. Face is detected, aligned, and embedding is extracted. Both the face image and embedding are encrypted and stored in MongoDB.
+- **Decryption**: When decrypting a file, the user must pass a live face scan. The captured face embedding is compared (cosine similarity) to the registered embedding. Only a match allows decryption.
+
+UI/UX DESIGN
+------------
+- **Theme**: Black background, white and orange text, modern fonts, and rounded corners.
+- **Animated Loading**: Overlay with animated spinner GIF during page transitions and long operations.
+- **Notification Bars**: All messages (success, error, info) appear as animated bars at the top of the app for 2 seconds.
+- **Consistent Navigation**: All pages use the same navigation and loading logic.
+- **Profile Management**: Full-page edit profile and change password views, with navigation and validation.
+- **Avatar Cropping**: Users can crop their profile picture before upload; avatars are encrypted before storage.
+
+USAGE INSTRUCTIONS
+------------------
+1. **Install Requirements**: See requirements.txt for all dependencies.
+2. **Start MongoDB**: Ensure MongoDB is running locally or update the connection string in database.py.
+3. **Run main.py**: Launch the app. Use the signup page to create a new account with face capture.
+4. **Login**: Enter your credentials. The home page will show your files and user info.
+5. **Upload Files**: Files are encrypted and stored in MongoDB, linked to your user.
+6. **Decrypt Files**: Select a file, enter your password, and pass a live face scan to decrypt.
+7. **Profile**: Upload/crop an avatar, edit your profile, or change your password from the profile page.
+
+NOTES
+-----
+- All sensitive operations are protected by encryption and biometric verification.
+- The app is modular and easy to extend (e.g., add analytics, more biometric options, or advanced file management).
+- All UI elements are styled for a modern, Iron Man-inspired look.
+
+CONTACT & SUPPORT
+-----------------
+For questions, improvements, or bug reports, contact the project maintainer. 
